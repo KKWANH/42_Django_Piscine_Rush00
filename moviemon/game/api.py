@@ -22,7 +22,7 @@ class	Data:
 			"Moviedex": self.moviedex,
 			"Movies": self.movielist}
 		return self._dic
-	
+
 	def	getMoviesById(self, _arr):
 		self.api_key = settings.API_KEY
 		self.moviedex = []
@@ -39,7 +39,7 @@ class	Data:
 			"Moviedex": self.moviedex,
 			"Movies": self.movielist}
 		return self._dic
-	
+
 	def	get_random_movie(self):
 		_obj = self.get()
 		_mov = _obj['Movies']
@@ -52,13 +52,13 @@ class	Data:
 					_cnt += 1
 			if _cnt == 0:
 				return _var
-	
+		
 	def	get_movie(self, name):
 		_obj = self.get()['Movies']
 		for _itm in _obj:
 			if _itm['Title'] == name:
 				return _itm
-	
+		
 	def	get_movie_by_id(self, mvid):
 		_obj = self.get()['Movies']
 		for _itm in _obj:

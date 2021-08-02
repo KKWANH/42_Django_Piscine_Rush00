@@ -71,6 +71,33 @@
 ## Set 3 🌃
 *by kkim*  
 
+<table widtd="800%" text-align="center"><tbody>
+	<tr>
+		<th>Name</th><th>Score (7~10))</th>
+		<th>Name</th><th>Score (4~6))</th>
+		<th>Name</th><th>Score (1~3))</th>
+	</tr>
+	<tr>
+		<td>John Wick: Chapter 3 - Parabellum</td><td>7.4</td>
+		<td>Twilight</td><td>5.2</td>
+		<td>D-War</td><td>3.8</td>
+	</tr>
+	<tr>
+		<td><b>Django</b></td><td>7.2</td>
+		<td>Lo chiamavano Trinità...</td><td>7.5</td>
+		<td>Hercules in New York</td><td>3.6</td>
+	</tr>
+	<tr>
+		<td>Cruella</td><td>7.4</td>
+		<td>tde Boss Baby: Family Business</td><td>5.9</td>
+		<td>Far Cry</td><td>3.5</td>
+	</tr>
+	<tr>
+		<td>Kung fu</td><td>7.7</td>
+		<td>Suicide Squad</td><td>5.9</td>
+		<td>Vampires Suck</td><td>3.5</td>
+	</tr>
+</tbody></table>
 <hr/>
 
 ## Set 4 🌄

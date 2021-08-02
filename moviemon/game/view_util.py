@@ -39,41 +39,41 @@ def	getFileName():
 
 def	ft_zero(slots, array):
 	_num = 0
-	rst = [[-1, ""], [-1, ""], [-1, ""]]
+	_rst = [[-1, ""], [-1, ""], [-1, ""]]
 	for x in array:
-		if rst[0][0] == -1:
+		if _rst[0][0] == -1:
 			if (x[0].find("slota")) != -1:
 				res[0] = [_num, x[0]]
 		
-		if rst[1][0] == -1:
+		if _rst[1][0] == -1:
 			if (x[0].find("slotb")) != -1:
 				res[1] = [_num, x[0]]
 		
-		if rst[2][0] == -1:
+		if _rst[2][0] == -1:
 			if (x[0].find("slotc")) != -1:
 				res[2] = [_num, x[0]]
 		_num += 1
-	if rst[0][0] == -1:
+	if _rst[0][0] == -1:
 		setSlot(slots, 0, "Free")
-	if rst[1][0] == -1:
+	if _rst[1][0] == -1:
 		setSlot(slots, 1, "Free")
-	if rst[2][0] == -1:
+	if _rst[2][0] == -1:
 		setSlot(slots, 2, "Free")
-	return	rst
+	return	_rst
 
 def	ft_progress(slots, rst, dic):
-	strM = " Moviemons"
+	_stm = " Moviemons"
 	if rst[0][0] != -1:
 		_dic = dic.load(rst[0][1])
-		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + strM
+		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + _stm
 		setSlot(slots, 0, status)
 	if rst[1][0] != -1:
 		_dic = dic.load(rst[1][1])
-		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + strM
+		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + _stm
 		setSlot(slots, 1, status)
 	if rst[2][0] != -1:
 		_dic = dic.load(rst[2][1])
-		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + strM
+		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + _stm
 		setSlot(slots, 2, status)
 
 def	init_slot(listParam):
@@ -128,7 +128,7 @@ def	load_progress(listParam, arrayPath):
 		return	True
 	return	False
 
-def	seve_game_file(arrayPath):
+def	save_game_file(arrayPath):
 	_dts = DataStorage()
 	try:
 		_dic = _dts.load()
