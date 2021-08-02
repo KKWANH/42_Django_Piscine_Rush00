@@ -36,6 +36,7 @@ def	getFileName():
 		_rst[_num] = settings.SAVED_DIR + _rst[_num]
 		print(_rst[_num])
 		_num += 1
+	return	_rst
 
 def	ft_zero(slots, array):
 	_num = 0
@@ -83,7 +84,7 @@ def	init_slot(listParam):
 		_arr.append([_idx, is_file(_idx)])
 	_slt = listParam.get("slots")
 	_dts = DataStorage()
-	_dts.load_default_setting()
+	_dts.load_default_settings()
 	_rst = ft_zero(_slt, _arr)
 	ft_progress(_slt, _rst, _dts)
 	return	_rst
@@ -133,7 +134,7 @@ def	save_game_file(arrayPath):
 	try:
 		_dic = _dts.load()
 	except FileNotFoundError:
-		_dts.load_default_setting()
+		_dts.load_default_settings()
 		_dts.dump()
 		_dic = _dts.load()
 	if settings.INDEX == 0:
