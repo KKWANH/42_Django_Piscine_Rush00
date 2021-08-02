@@ -89,7 +89,7 @@
 	</tr>
 	<tr>
 		<td>Cruella</td><td>7.4</td>
-		<td>tde Boss Baby: Family Business</td><td>5.9</td>
+		<td>the Boss Baby: Family Business</td><td>5.9</td>
 		<td>Far Cry</td><td>3.5</td>
 	</tr>
 	<tr>
