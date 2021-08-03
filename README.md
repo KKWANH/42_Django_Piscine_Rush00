@@ -1,7 +1,7 @@
 # Movie List 🎬
-- there are **4 set** of movies, choose one of tdis when you start program.
+- there are **4 set** of movies, choose one of this when you start program.
 - there are **12 movies** per **1 set**.
-- they are graded on 0-3 points, 4-6 points, and 7-10 points, witd 4 movie each.
+- they are graded on 0-3 points, 4-6 points, and 7-10 points, with 4 movie each.
 
 <hr/>
 
@@ -71,7 +71,7 @@
 ## Set 3 🌃
 *by kkim*  
 
-<table widtd="800%" text-align="center"><tbody>
+<table width="800%" text-align="center"><tbody>
 	<tr>
 		<th>Name</th><th>Score (7~10))</th>
 		<th>Name</th><th>Score (4~6))</th>

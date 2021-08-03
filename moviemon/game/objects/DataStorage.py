@@ -16,7 +16,7 @@ class	DataStorage:
 		self.positionPlayer = positionPlayer
 		if len(self.positionPlayer) == 0:
 			self.positionPlayer = settings.DEFAULT_START_PLAYER_POSITION
-		self.amout_MvBall = amountMovieBall
+		self.amountMovieBall = amountMovieBall
 		self.listMovieId = listMovieId
 		self.dataMovieIMDB = dataMovieIMDB
 		self.menuItem = menuItem
@@ -41,7 +41,7 @@ class	DataStorage:
 	def	getMoviesById(self):
 		_dat = Data()
 		_arr = self.getListMovieName()
-		return	_dat.getMovieById(_arr)
+		return	_dat.getMoviesById(_arr)
 
 	def	setDataMovieIMDB(self, dataMovieIMDB):
 		self.dataMovieIMDB = dataMovieIMDB
@@ -53,10 +53,10 @@ class	DataStorage:
 	def	getMenuItem(self):
 		return	self.menuItem
 
-	def	addamountMovieBall(self):
+	def	addAmountMovieBall(self):
 		self.amountMovieBall = self.amountMovieBall + 1
 		settings.BALLS = settings.BALLS + 1
-	def	removeamountMovieBall(self):
+	def	removeAmountMovieBall(self):
 		self.amountMovieBall = self.amountMovieBall - 1
 		settings.BALLS = settings.BALLS - 1
 

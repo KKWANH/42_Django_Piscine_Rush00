@@ -35,14 +35,14 @@ def	worldMap(request):
 	_po2 = {}
 	_btn = request.GET.get('button', '')
 	if _btn:
-		if _btn == "up"		 and _pos[1] > 0:
-			_pos[1] -= 1
-		elif _btn == "down"	 and _pos[1] + 1 < settings.DEFAULT_GAME_SIZE:
-			_pos[1] += 1
-		elif _btn == "left"	 and _pos[0] > 0:
-			_pos[0] -= 1
-		elif _btn == "right" and _pos[0] + 1 < settings.DEFAULT_GAME_SIZE:
-			_pos[0] += 1
+		if _btn == "up"		 and _pos[1] - 2 >= 0:
+			_pos[1] -= 2
+		elif _btn == "down"	 and _pos[1] + 2 < settings.DEFAULT_GAME_SIZE:
+			_pos[1] += 2
+		elif _btn == "left"	 and _pos[0] - 2 >= 0:
+			_pos[0] -= 2
+		elif _btn == "right" and _pos[0] + 2 < settings.DEFAULT_GAME_SIZE:
+			_pos[0] += 2
 		elif _btn == "select":
 			return redirect("../moviedex")
 		elif _btn == "start":
@@ -51,11 +51,11 @@ def	worldMap(request):
 			settings.TOKEN = ''
 	settings.TOKEN = ''
 	if _pos[0] and settings.DEFAULT_GAME_SIZE > 0:
-		_po2["x"] = _pos[0] * (100 / settings.DEFAULT_GAME_SIZE)
+		_po2["x"] = _pos[0]
 	else:
 		_po2["x"] = 0
 	if _pos[1] and settings.DEFAULT_GAME_SIZE > 0:
-		_po2["y"] = _pos[1] * (100 / settings.DEFAULT_GAME_SIZE)
+		_po2["y"] = _pos[1]
 	else:
 		_po2["y"] = 0
 	_obj = {"position": _po2}
@@ -90,12 +90,12 @@ def	battle(request, moviemon_id):
 		_ini = Data()
 		_dat = _ini.get_movie_by_id(moviemon_id)
 		_obj["movie"] = _dat
-		_btn = request.GET.et('button', '')
+		_btn = request.GET.get('button', '')
 		if _btn == 'a':
 			if settings.BALLS > 0:
 				_tm1 = _dat["imdbRating"] or 5.2
 				_tm2 = int(float(_tm1))
-				_dts.removeAmoutMovieBall()
+				_dts.removeAmountMovieBall()
 				_dts.dump()
 				_pst = _dts.get_strength()
 				_chr = 50 -  _tm2 * 100 + _pst * 5

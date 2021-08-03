@@ -159,11 +159,11 @@ li.selected {
 	font-weight: 600;
 	font-size: 11px;
 }
-.dickhead {
+.positionPlayer {
 	position: absolute;
 	z-index: 31;
-	top: 66%;
-	right: 42%;
+	top: 50%;
+	right: 50%;
 	width: 10px;
 	height: 10px;
 	border-radius: 10px;

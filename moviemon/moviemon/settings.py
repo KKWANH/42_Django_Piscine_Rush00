@@ -127,11 +127,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-DEFAULT_GAME_SIZE = 21
+DEFAULT_GAME_SIZE = 64
 
 DEFAULT_AMOUNT_BALL = 0
 
-DEFAULT_START_PLAYER_POSITION = [9, 9]
+DEFAULT_START_PLAYER_POSITION = [0, 0]
 
 SAVED_DIR = "saved_game/"
 
@@ -160,6 +160,8 @@ if tmp_random == 1:
 	]
 API_KEY="85b022eb"
 SIZE_MOVIE = len(MOVIES)
+
+MOVIES_IMDB = {}
 
 INDEX = 0
 TOKEN =''

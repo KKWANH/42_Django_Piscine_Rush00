@@ -24,7 +24,7 @@ class	Player:
 
 	def	ft_move_right(self):
 		if (self.x < self.max_x):
-			self.x -= 1
+			self.x += 1
 	
 	def	ft_get_position(self):
 		return ([self.x, self.y])
