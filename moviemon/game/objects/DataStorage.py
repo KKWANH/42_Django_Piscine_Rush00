@@ -2,8 +2,8 @@ import	pickle
 import	random
 import	sys
 import	os
-from	django.conf			import settings
-from	game.api			import Data
+from	django.conf	import settings
+from	game.api import Data
 
 class	DataStorage:
 
@@ -35,6 +35,7 @@ class	DataStorage:
 
 	def	setListMovieName(self, listMovieId):
 		self.listMovieId = listMovieId
+	
 	def	getListMovieName(self):
 		return	self.listMovieId
 
@@ -48,11 +49,12 @@ class	DataStorage:
 	def	getDataMovieIMDB(self):
 		return	self.dataMovieIMDB
 
-	def	setMenuItem(self, menuItem):
-		self.menuItem = menuItem
+	def	setMenuItem(self, index):
+		self.menuItem = index
 	def	getMenuItem(self):
 		return	self.menuItem
-
+	def get_movie(self):
+		return (self.getDataMovieIMDB())
 	def	addAmountMovieBall(self):
 		self.amountMovieBall = self.amountMovieBall + 1
 		settings.BALLS = settings.BALLS + 1
@@ -93,6 +95,12 @@ class	DataStorage:
 		_dat.get_movie(name)
 		return	_dat
 
+	def 	printO(self):
+		print(self.positionPlayer)
+		print(self.amountMovieBall)
+		print(self.listMovieId)
+		# print(self.dataMovieIMDB)
+		
 	def	get_strength(self):
 		return	len(self.listMovieId) + 1
 	
