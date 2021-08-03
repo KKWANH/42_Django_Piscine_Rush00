@@ -3,7 +3,8 @@
 
 {% block content %}
 	<section class="map" style="background-position: {{ position.x }}% {{ position.y }}% " >
-		<h6 class="screen-data">{{ screen_data.moviemons_left }} / {{ screen_data.moviemons_total }}<br>🎾: {{ screen_data.movieballs }}</h6>
+		<h6 class="screen_data" style="margin-bottom: -16px;">LEFT: {{ screen_data.moviemons_left }}</h6>
+		<h6 class="screen_data">BALL: {{ screen_data.movieballs }}</h6>
 		{% if moviemon %}
 			<div class="dialog found" >
 				<h6>Congrats! You've found a {{ moviemon.Title }}</h6>

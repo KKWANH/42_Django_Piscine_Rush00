@@ -56,12 +56,6 @@ li.selected {
     background-color: #75d13f;
   }
 }
-.pad {
-	width: 65%;
-	position: absolute;
-	top: 75%;
-	left: 17.25%;
-}
 
 .button {
     background-color: #4CAF50;
@@ -120,12 +114,16 @@ li.selected {
 	padding-top: 12px;
 	color: darkblue;
 }
-.screen-data {
-	padding: 8px;
+.screen_data
+{
+	text-align: center;
+	padding: 10px;
 	display: block;
 	clear: both;
 	float: left;
-	color: orange;
+	width: 90px;
+	margin-left: 10px;
+	color: #00ff15;
 	background: black;
 	opacity: .88
 }

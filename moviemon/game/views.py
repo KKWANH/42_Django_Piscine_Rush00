@@ -34,7 +34,6 @@ def	worldMap(request):
 	_pos = _dts.getPositionPlayer()
 	_po2 = {}
 	_btn = request.GET.get('button', '')
-	print(_pos[0], _pos[1])
 	if _btn:
 		if _btn == "up" and _pos[1] > -101:
 			_pos[1] -= 10
