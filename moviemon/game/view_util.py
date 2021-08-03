@@ -157,4 +157,4 @@ def	save_game_file(arrayPath):
 	_dts.setListMovieName(_dic["listMovieId"])
 	_dts.setDataMovieIMDB(_dic["dataMovieIMDB"])
 	_dts.setMenuItem(_dic["menuItem"])
-	_dts.dump(_nam)
+	#_dts.dump(_nam)
