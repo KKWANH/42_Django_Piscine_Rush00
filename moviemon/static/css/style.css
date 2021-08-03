@@ -51,8 +51,14 @@ li.selected {
     background-color: #75d13f;
   }
 }
+.pad {
+	width: 65%;
+	position: absolute;
+	top: 75%;
+	left: 17.25%;
+}
 
-/*.button {
+.button {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -61,7 +67,7 @@ li.selected {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}*/
+}
 .mini-poster {
 	width: 50px;
 	height: 50px;
@@ -75,7 +81,8 @@ li.selected {
 .list {}
 
 .map {
-	width: 420px;
+	width: 50%;
+	margin-left: 25%;
 	height: 420px;
 	background-image: url("../img/map.png");
 	position: relative;

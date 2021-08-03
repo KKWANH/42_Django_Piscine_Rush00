@@ -14,6 +14,10 @@
 	{% endblock %}
 
 	{% block button %}
+	<br><br>
+	<img class="pad" src="{% static 'img/pad.png' %}">
+	<a {% if buttons.a.link %} href="{{ buttons.a.link }}" {% else %} href="?button=A" {% endif %} type="GET"><img class="botton_img" style="position: absolute; top: 104%; right: 33%;"src="{% static 'img/pad_btn_A.png' %}"></a>
+	<a {% if buttons.b.link %} href="{{ buttons.b.link }}" {% else %} href="?button=B" {% endif %} type="GET"><img class="botton_img" style="position: absolute; top: 95%; right: 26.7%;"src="{% static 'img/pad_btn_B.png' %}"></a> {{ buttons.b.text }}
 	<p>
 		<p>
 			<a {% if buttons.start.link %} href="{{ buttons.start.link }}" {% else %} href="?button=start" {% endif %} type="GET" class="button">Start</a> {{ buttons.start.text }}
@@ -22,12 +26,6 @@
 			<a {% if buttons.select.link %} href="{{ buttons.select.link }}" {% else %} href="?button=select" {% endif %} type="GET" class=button>Select</a> {{ buttons.select.text }}
 		</p>
 		<div>
-			<p>
-				<a {% if buttons.a.link %} href="{{ buttons.a.link }}" {% else %} href="?button=A" {% endif %} type="GET" class="button">A</a> {{ buttons.a.text }}
-			</p>
-			<p>
-				<a  {% if buttons.b.link %} href="{{ buttons.b.link }}" {% else %} href="?button=B" {% endif %} type="GET" class=button>B</a> {{ buttons.b.text }}
-			</p>
 			<div class="arrow-keys">
 				<p class="up">
 					<a href="?button=up" type="GET" class="button up">UP</a> {{ buttons.up.text }}

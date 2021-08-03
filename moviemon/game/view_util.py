@@ -98,7 +98,7 @@ def	changeData(listParam, arrayPath):
 	if settings.INDEX == 2:
 		_tmp = _dts.load(arrayPath[2][1])
 	_dts.setPositionPlayer(_tmp["positionPlayer"])
-	_dts.setAmountMovieBall(_tmp["amoutMovieBall"])
+	_dts.setAmountMovieBall(_tmp["amountMovieBall"])
 	_dts.setListMovieName(_tmp["listMovieId"])
 	_dts.setDataMovieIMDB(_tmp["dataMovieIMDB"])
 	_dts.setMenuItem(_tmp["menuItem"])
@@ -146,14 +146,14 @@ def	save_game_file(arrayPath):
 		if arrayPath[1][0] != -1:
 			os.remove(arrayPath[1][1])
 	elif settings.INDEX == 2:
-		_nam = "slotb"
+		_nam = "slotc"
 		if arrayPath[2][0] != -1:
 			os.remove(arrayPath[2][1])
 	_nam = settings.SAVED_DIR + _nam + "_" + \
 		str(len(_dic.get("listMovieId"))) + "_" + \
 		str(settings.SIZE_MOVIE) + ".mmg"
 	_dts.setPositionPlayer(_dic["positionPlayer"])
-	_dts.setAmountMovieBall(_dic["amoutMovieBall"])
+	_dts.setAmountMovieBall(_dic["amountMovieBall"])
 	_dts.setListMovieName(_dic["listMovieId"])
 	_dts.setDataMovieIMDB(_dic["dataMovieIMDB"])
 	_dts.setMenuItem(_dic["menuItem"])

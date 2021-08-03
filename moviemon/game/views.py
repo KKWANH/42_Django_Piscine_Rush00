@@ -34,15 +34,16 @@ def	worldMap(request):
 	_pos = _dts.getPositionPlayer()
 	_po2 = {}
 	_btn = request.GET.get('button', '')
+	print(_pos[0], _pos[1])
 	if _btn:
-		if _btn == "up"		 and _pos[1] - 2 >= 0:
-			_pos[1] -= 2
-		elif _btn == "down"	 and _pos[1] + 2 < settings.DEFAULT_GAME_SIZE:
-			_pos[1] += 2
-		elif _btn == "left"	 and _pos[0] - 2 >= 0:
-			_pos[0] -= 2
-		elif _btn == "right" and _pos[0] + 2 < settings.DEFAULT_GAME_SIZE:
-			_pos[0] += 2
+		if _btn == "up" and _pos[1] > -101:
+			_pos[1] -= 10
+		elif _btn == "down" and _pos[1] < 200:
+			_pos[1] += 10
+		elif _btn == "left" and _pos[0] < 470:
+			_pos[0] += 12
+		elif _btn == "right" and _pos[0] > -350:
+			_pos[0] -= 12
 		elif _btn == "select":
 			return redirect("../moviedex")
 		elif _btn == "start":
@@ -123,7 +124,7 @@ def	battle(request, moviemon_id):
 		return	redirect("..")
 
 def	options(request):
-	settigns.INDEX = 0
+	settings.INDEX = 0
 	_prm = {
 		"buttons": {
 			"a": {"text": "Save"},
@@ -241,6 +242,7 @@ def	detail(request, moviemon_id):
 
 def	moviedex(request):
 	_mov = _dts.getMoviesById()['Movies']
+	menuItem = 0
 	if request.method == "GET":
 		_btn = request.GET.get('button')
 		if _btn:
