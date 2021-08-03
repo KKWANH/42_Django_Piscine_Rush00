@@ -240,20 +240,21 @@ def	detail(request, moviemon_id):
 		return	render(request, "detail.html", _viw)
 
 def	moviedex(request):
-	_mov = _dts.getMoviesById()['Movies']
+	_dtt = _dts
+	_mov = _dtt.getMoviesById()['Movies']
 	menuItem = 0
-	if request.method == "GET":
-		_btn = request.GET.get('button')
-		if _btn:
-			if _btn == "select":
-				return	redirect("../worldmap/")
-			elif len(_mov):
-				if _btn == "A":
-					menuItem = _dts.getMenuItem()
-				elif _btn == "up":
-					menuItem = settings.INDEX - 1 % len(_mov)
-				elif _btn == "down":
-					menuItem = settings.INDEX + 1 % len(_mov)
+	_btn = request.GET.get('button', '')
+	if _btn:
+		if _btn == "select":
+			return	redirect("../worldmap/")
+		elif len(_mov):
+			if _btn == "A":
+				menuItem = _dts.getMenuItem()
+				return	redirect("../moviedex/" + _mov[menuItem]['imdbID'])
+			elif _btn == "up":
+				menuItem = settings.INDEX - 1 % len(_mov)
+			elif _btn == "down":
+				menuItem = settings.INDEX + 1 % len(_mov)
 	settings.INDEX = menuItem
 	_viw = {"movies": _mov, "menuItem": menuItem}
 	return	render(request, "moviedex.html", _viw)

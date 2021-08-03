@@ -42,7 +42,8 @@ class	DataStorage:
 	def	getMoviesById(self):
 		_dat = Data()
 		_arr = self.getListMovieName()
-		return	_dat.getMoviesById(_arr)
+		_rst = _dat.getMoviesById(_arr)
+		return	_rst
 
 	def	setDataMovieIMDB(self, dataMovieIMDB):
 		self.dataMovieIMDB = dataMovieIMDB

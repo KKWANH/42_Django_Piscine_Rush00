@@ -141,7 +141,7 @@ LOAD_FLAG = 0
 
 # defines
 
-tmp_random = 1
+tmp_random = random.randrange(1, 4)
 
 if tmp_random == 1:
 	MOVIES = [
@@ -158,6 +158,39 @@ if tmp_random == 1:
 		"The Emoji Movie",
 		"Captain America"
 	]
+
+elif tmp_random == 2:
+	MOVIES = [
+		"I Am Sam",
+		"Harry Potter and the Sorcerer's Stone",
+		"Cruella",
+		"the Dark Knight",
+		"Twilight",
+		"Chernobyl",
+		"the Boss Baby: Family Business",
+		"Suicide Squad",
+		"D-War",
+		"Hercules in New York"
+		"Far Cry",
+		"Vampires Suck"
+	]
+
+elif tmp_random == 3:
+	MOVIES = [
+		"John Wick: Chapter 3 - Parabellum",
+		"Django",
+		"Kung fu",
+		"Godfather",
+		"Venom",
+		"The Hitman's Bodyguard",
+		"Lo chiamavano Trinità...",
+		"Night at the Museum",
+		"Kod Adi K.O.Z.",
+		"Saving Christmas"
+		"House of the Dead",
+		"The Hottie & the Nottie"
+	]
+
 API_KEY="85b022eb"
 SIZE_MOVIE = len(MOVIES)
 

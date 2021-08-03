@@ -79,26 +79,23 @@
 	</tr>
 	<tr>
 		<td>John Wick: Chapter 3 - Parabellum</td><td>7.4</td>
-		<td>Twilight</td><td>5.2</td>
-		<td>D-War</td><td>3.8</td>
+		<td>Venom</td><td>6.7</td>
+		<td>Kod Adi K.O.Z.</td><td>2.1</td>
 	</tr>
 	<tr>
 		<td><b>Django</b></td><td>7.2</td>
 		<td>Lo chiamavano Trinità...</td><td>7.5</td>
-		<td>Hercules in New York</td><td>3.6</td>
+		<td>Saving Christmas</td><td>2.1</td>
 	</tr>
 	<tr>
-		<td>Cruella</td><td>7.4</td>
-		<td>the Boss Baby: Family Business</td><td>5.9</td>
-		<td>Far Cry</td><td>3.5</td>
+		<td>The Godfather</td><td>9.2</td>
+		<td>The Hitman's Bodyguard</td><td>6.9</td>
+		<td>The Hottie & the Nottie</td><td>2.2</td>
 	</tr>
 	<tr>
 		<td>Kung fu</td><td>7.7</td>
-		<td>Suicide Squad</td><td>5.9</td>
-		<td>Vampires Suck</td><td>3.5</td>
+		<td>Night at the Museum</td><td>6.4</td>
+		<td>House of the Dead</td><td>2.3</td>
 	</tr>
 </tbody></table>
 <hr/>
-
-## Set 4 🌄
-*by kkim*  

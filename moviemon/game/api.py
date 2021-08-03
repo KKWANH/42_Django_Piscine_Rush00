@@ -21,7 +21,7 @@ class	Data:
 		self._dic = {
 			"Moviedex": self.moviedex,
 			"Movies": self.movielist}
-		return self._dic
+		return	self._dic
 
 	def	getMoviesById(self, _arr):
 		self.api_key = settings.API_KEY
@@ -31,14 +31,14 @@ class	Data:
 			response = requests.get(
 				"https://www.omdbapi.com/?apikey=" +
 				self.api_key +
-				"&t=" +
+				"&i=" +
 				idnx +
 				"&plot=short&r=json")
 			self.movielist.append(json.loads(response.text))
 		self._dic = {
 			"Moviedex": self.moviedex,
 			"Movies": self.movielist}
-		return self._dic
+		return	self._dic
 
 	def	get_random_movie(self):
 		_obj = self.get()
@@ -51,16 +51,16 @@ class	Data:
 				if _dex[_idx]['Title'] == _var['Title']:
 					_cnt += 1
 			if _cnt == 0:
-				return _var
+				return	_var
 		
 	def	get_movie(self, name):
 		_obj = self.get()['Movies']
 		for _itm in _obj:
 			if _itm['Title'] == name:
-				return _itm
+				return	_itm
 		
 	def	get_movie_by_id(self, mvid):
 		_obj = self.get()['Movies']
 		for _itm in _obj:
 			if _itm['imdbID'] == mvid:
-				return _itm
+				return	_itm
