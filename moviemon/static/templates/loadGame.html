@@ -3,7 +3,9 @@
 
 {% block content %}
 
-	<h4>Pick a slot to load from:</h4>
+	<p>
+		&nbsp;&nbsp;Pick a slot to load from:
+	</p>
 	<ul class="menu">
 	{% for s in slots %}
 		<li id="{{ m.Title }}" {% if forloop.counter0 == selectedMenuItemIndex %} class="selected" {% endif %} >

@@ -1,6 +1,11 @@
+@font-face {
+	font-family: "PKMN RBYGSC";
+	font-style: normal;
+	src: url("../font/PKMN_RBYGSC.ttf") format("truetype");
+}
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	background-color: lightgray;
+	font-family: "PKMN RBYGSC";
+	background-color: white;
 	max-width: 100vw;
 }
 pre {
@@ -81,8 +86,7 @@ li.selected {
 .list {}
 
 .map {
-	width: 50%;
-	margin-left: 25%;
+	width: 100%;
 	height: 420px;
 	background-image: url("../img/map.png");
 	position: relative;
@@ -96,7 +100,6 @@ li.selected {
 }
 /* 1171px 1279px */
 .button {
-	float: left;
 	display: inline-block;
 	padding: 8px 12px;
 	margin: 20px;
@@ -116,24 +119,6 @@ li.selected {
 	padding-right: 14px;
 	padding-top: 12px;
 	color: darkblue;
-}
-.arrow-keys, .arrow-keys .up {
-	clear: both;
-	margin: 0 auto;
-	max-width: 420px;
-	float: left;
-}
-.arrow-keys p.up {
-	width: 100%;
-}
-.arrow-keys p.up > a.up {
-	float: none;
-	margin: 0 auto;
-	width: 54px;
-	display: block;
-}
-.arrow-keys p {
-	float: left;
 }
 .screen-data {
 	padding: 8px;
@@ -171,11 +156,9 @@ li.selected {
 	z-index: 31;
 	top: 50%;
 	right: 50%;
-	width: 10px;
-	height: 10px;
+	width: 33px;
+	height: 33px;
 	border-radius: 10px;
-	background-color: yellow;
-	border: solid 4px red;
 }
 b { font-weight: 900; }
 .movie-icon, .pickle-rick > .img, .moviemon > .img, .win .img {

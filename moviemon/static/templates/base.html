@@ -5,43 +5,95 @@
 	<meta charset="utf-8">
 	<title>Game</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+	<style>
+		
+	</style>
 </head>
 <body>
 	<h1>Moviemon</h1>
 	
-	{% block content %}
-		<img src="{% static 'screen.png' %}">
-	{% endblock %}
+	<div style="border-top: 12px solid black; border-left: 8px solid black; border-right: 8px solid black; border-bottom: 12px solid black; width: 60%; margin-left: 20%;" >
+		{% block content %}
+			<img src="{% static 'screen.png' %}">
+		{% endblock %}
+	</div>
+	<div style="border-top: 12px solid black; border-left: 8px solid black; border-right: 8px solid black; border-bottom: 12px solid black; width: 60%; margin-left: 20%;" >
+		<div style="height: 30px; text-align: center;">
+			<p>&nbsp;&nbsp;
+			{% if buttons.up.text %}
+				Press <b>UP</b> to {{ buttons.up.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.down.text %}
+				Press <b>DOWN</b> to {{ buttons.up.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.left.text %}
+				Press <b>LEFT</b> to {{ buttons.up.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.right.text %}
+				Press <b>RIGHT</b> to {{ buttons.up.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.select.text %}
+				Press <b>SELECT</b> to {{ buttons.select.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.start.text %}
+				Press <b>START</b> to {{ buttons.start.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.a.text %}
+				Press <b>A</b> to {{ buttons.a.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			{% if buttons.b.text %}
+				Press <b>B</b> to {{ buttons.b.text }}.&nbsp;&nbsp;&nbsp;&nbsp;
+			{% endif %}
+			</p>
+		</div>
+	</div>
 
 	{% block button %}
 	<br><br>
 	<img class="pad" src="{% static 'img/pad.png' %}">
-	<a {% if buttons.a.link %} href="{{ buttons.a.link }}" {% else %} href="?button=A" {% endif %} type="GET"><img class="botton_img" style="position: absolute; top: 104%; right: 33%;"src="{% static 'img/pad_btn_A.png' %}"></a>
-	<a {% if buttons.b.link %} href="{{ buttons.b.link }}" {% else %} href="?button=B" {% endif %} type="GET"><img class="botton_img" style="position: absolute; top: 95%; right: 26.7%;"src="{% static 'img/pad_btn_B.png' %}"></a> {{ buttons.b.text }}
-	<p>
-		<p>
-			<a {% if buttons.start.link %} href="{{ buttons.start.link }}" {% else %} href="?button=start" {% endif %} type="GET" class="button">Start</a> {{ buttons.start.text }}
-		</p>
-		<p>
-			<a {% if buttons.select.link %} href="{{ buttons.select.link }}" {% else %} href="?button=select" {% endif %} type="GET" class=button>Select</a> {{ buttons.select.text }}
-		</p>
-		<div>
-			<div class="arrow-keys">
-				<p class="up">
-					<a href="?button=up" type="GET" class="button up">UP</a> {{ buttons.up.text }}
-				</p>
-				<p>
-					<a href="?button=left" type="GET" class=button>Left</a> {{ buttons.left.text }}
-				</p>
-				<p>
-					<a href="?button=down" type="GET" class=button>Down</a> {{ buttons.down.text }}
-				</p>
-				<p>
-					<a href="?button=right" type="GET" class=button>Right</a> {{ buttons.right.text }}
-				</p>
-			</div>
-		</div>
-	</p>
+	<a {% if buttons.a.link %} href="{{ buttons.a.link }}" {% else %} href="?button=A" {% endif %} type="GET">
+		<img
+			style="width: 5%; position: absolute; top: 104%; right: 33%;"
+			src="{% static 'img/pad_btn_A.png' %}">
+	</a>
+	<a {% if buttons.b.link %} href="{{ buttons.b.link }}" {% else %} href="?button=B" {% endif %} type="GET">
+		<img
+			style="width: 5%; position: absolute; top: 95%; right: 26.7%;"
+			src="{% static 'img/pad_btn_B.png' %}">
+	</a>
+	<a href="?button=up" type="GET">
+		<img
+			style="width: 2.8%; position: absolute; top: 94%; right: 67.9%;"
+			src="{% static 'img/pad_btn_up.png' %}">
+	<a href="?button=down" type="GET">
+		<img
+			style="width: 2.8%; position: absolute; top: 107.2%; right: 67.9%;"
+			src="{% static 'img/pad_btn_down.png' %}">
+	<a href="?button=left" type="GET">
+		<img
+			style="width: 2.8%; position: absolute; top: 100.5%; right: 71.4%;"
+			src="{% static 'img/pad_btn_left.png' %}">
+	</a>
+	<a href="?button=right" type="GET">
+		<img
+			style="width: 2.8%; position: absolute; top: 100.5%; right: 64.4%;"
+			src="{% static 'img/pad_btn_right.png' %}">
+	</a>
+	<a href="?button=start" type="GET">
+		<img
+			style="width: 2.8%; position: absolute; top: 100.5%; right: 64.4%;"
+			src="{% static 'img/pad_btn_right.png' %}">
+	</a>
+	<a {% if buttons.start.link %} href="{{ buttons.start.link }}" {% else %} href="?button=start" {% endif %} type="GET" >
+		<img
+			style="width: 4.7%; position: absolute; top: 103%; right: 47%;"
+			src="{% static 'img/pad_btn_opt.png' %}">
+	</a>
+	<a {% if buttons.select.link %} href="{{ buttons.select.link }}" {% else %} href="?button=select" {% endif %} type="GET" >
+		<img
+			style="width: 4.7%; position: absolute; top: 103%; right: 54%;"
+			src="{% static 'img/pad_btn_opt.png' %}">
+	</a>
 	{% endblock %}
 
 </body>
