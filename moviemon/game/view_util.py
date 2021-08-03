@@ -41,18 +41,18 @@ def	getFileName():
 def	ft_zero(slots, array):
 	_num = 0
 	_rst = [[-1, ""], [-1, ""], [-1, ""]]
-	for x in array:
+	for _idx in array:
 		if _rst[0][0] == -1:
-			if (x[0].find("slota")) != -1:
-				res[0] = [_num, x[0]]
+			if (_idx[0].find("slota")) != -1:
+				_rst[0] = [_num, _idx[0]]
 		
 		if _rst[1][0] == -1:
-			if (x[0].find("slotb")) != -1:
-				res[1] = [_num, x[0]]
+			if (_idx[0].find("slotb")) != -1:
+				_rst[1] = [_num, _idx[0]]
 		
 		if _rst[2][0] == -1:
-			if (x[0].find("slotc")) != -1:
-				res[2] = [_num, x[0]]
+			if (_idx[0].find("slotc")) != -1:
+				_rst[2] = [_num, _idx[0]]
 		_num += 1
 	if _rst[0][0] == -1:
 		setSlot(slots, 0, "Free")
@@ -62,18 +62,18 @@ def	ft_zero(slots, array):
 		setSlot(slots, 2, "Free")
 	return	_rst
 
-def	ft_progress(slots, rst, dic):
+def	ft_progress(slots, _rst, dic):
 	_stm = " Moviemons"
-	if rst[0][0] != -1:
-		_dic = dic.load(rst[0][1])
+	if _rst[0][0] != -1:
+		_dic = dic.load(_rst[0][1])
 		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + _stm
 		setSlot(slots, 0, status)
-	if rst[1][0] != -1:
-		_dic = dic.load(rst[1][1])
+	if _rst[1][0] != -1:
+		_dic = dic.load(_rst[1][1])
 		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + _stm
 		setSlot(slots, 1, status)
-	if rst[2][0] != -1:
-		_dic = dic.load(rst[2][1])
+	if _rst[2][0] != -1:
+		_dic = dic.load(_rst[2][1])
 		status = str(len(_dic.get("listMovieId"))) + "/" + str(settings.SIZE_MOVIE) + _stm
 		setSlot(slots, 2, status)
 
